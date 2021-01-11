@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"it.xfnet.mlanon","c":"MLAnonimizedSummary","l":"getAsn()"},{"p":"it.xfnet.mlanon","c":"MLAnonimizedSummary","l":"getCountry()"},{"p":"it.xfnet.mlanon","c":"MLAnonimizedSummary","l":"getIsp()"},{"p":"it.xfnet.mlanon","c":"MLAnonimizedSummary","l":"getRegion()"},{"p":"it.xfnet.mlanon","c":"MLAnonimizedSummary","l":"toString()"}]
