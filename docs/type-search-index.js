@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"it.xfnet.mlanon","l":"MLAnonimizedSummary"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"it.xfnet.mlanon","l":"MLAnonimizedSummary"},{"p":"it.xfnet.mlanon","l":"MultiLevelAnonimizer"}]
