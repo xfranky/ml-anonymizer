@@ -1,5 +1,8 @@
 package it.xfnet.mlanon;
 
+/**
+* This class represents an anonymized summary of records with all the properties that could be anonymized
+*/
 class MLAnonimizedSummary {
 	String country;
 	String region;
