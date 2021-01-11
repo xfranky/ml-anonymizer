@@ -2,10 +2,18 @@ package it.xfnet.mlanon;
 
 import java.util.List;
 
+/***
+* This class will test the Multi Level Anonimizer using a small set of data
+*
+* @see MultiLevelAnonimizer
+*/
+
 public class MultiLevelAnonimizerTest {
 	
 	/***
-	* This class will test the Multi Level Anonimizer
+	* The main method will test the Multi Level Anonimizer using a small set of data
+	* 
+	* @param args The main method accepts the number of minimum results to consider as anonimized
 	*/
 
 	public static void main(String[] args) {
