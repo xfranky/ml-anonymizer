@@ -13,15 +13,6 @@ class MLAnonimizedSummary {
 	long maxSpeed;
 	double avgSpeed;
 
-	MLAnonimizedSummary(String theCountry){
-		country = theCountry;
-	}
-
-	MLAnonimizedSummary(String theCountry, String theRegion){
-		country = theCountry;
-		region = theRegion;
-	}
-
 	MLAnonimizedSummary(String theCountry, String theRegion, String theIsp, Integer theAsn){
 		country = theCountry;
 		region = theRegion;
