@@ -118,15 +118,4 @@ class MLCountry {
 		}
 	}
 
-	void populateSummaries(java.util.List<MLAnonimizedSummary> summaries, MLAnonimizedSummary currentSummary, int minResults) {
-		MLAnonimizedSummary regionSummary;
-		for(MLRegion region : regions.values()) {
-			if (region.getNumResults() >= minResults) {
-				regionSummary = new MLAnonimizedSummary(currentSummary.getCountry(), region.getRegionName());
-				// Percolate here
-				summaries.add(regionSummary);
-			}
-		}
-	}
-
 }
