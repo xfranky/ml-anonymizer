@@ -1,22 +1,22 @@
 package it.xfnet.mlanon;
 
-class MultiLevelAnonimizer {
+public class MultiLevelAnonimizer {
 
-	int defaultMinResults;
-	java.util.HashMap<String, MLCountry> countries;
-	int totResults;
+	private int defaultMinResults;
+	private java.util.HashMap<String, MLCountry> countries;
+	private int totResults;
 
-	MultiLevelAnonimizer(int minResultsInit){
+	public MultiLevelAnonimizer(int minResultsInit){
 		defaultMinResults = minResultsInit;
 		countries = new java.util.HashMap<String, MLCountry>();
 		totResults = 0;
 	}
 
-	MultiLevelAnonimizer() {
+	public MultiLevelAnonimizer() {
 		this(2);
 	}
 
-	void addResult(MLResult result) {
+	public void addResult(MLResult result) {
 		// System.out.println("Adding result to country: " + result.getCountry());
 		if (!countries.containsKey(result.getCountry())) {
 			countries.put(result.getCountry(), new MLCountry(result.getCountry()));
@@ -58,7 +58,7 @@ class MultiLevelAnonimizer {
 		return getAnonimizedResults(defaultMinResults);
 	}
 
-	java.util.List<MLAnonimizedSummary> getAnonimizedResults(int minResults) {
+	public java.util.List<MLAnonimizedSummary> getAnonimizedResults(int minResults) {
 		// Let's keep the anonimized summaries in a list
 		java.util.List<MLAnonimizedSummary> summaries = new java.util.ArrayList<MLAnonimizedSummary>();
 		MLAnonimizedSummary currentSummary;
