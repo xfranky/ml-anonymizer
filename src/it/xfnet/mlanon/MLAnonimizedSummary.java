@@ -3,7 +3,7 @@ package it.xfnet.mlanon;
 /**
 * This class represents an anonymized summary of records with all the properties that could be anonymized
 */
-class MLAnonimizedSummary {
+public class MLAnonimizedSummary {
 	String country;
 	String region;
 	String isp;
@@ -32,19 +32,39 @@ class MLAnonimizedSummary {
 		asn = theAsn;
 	}
 
-	String getCountry() {
+	/**
+	* Returns the code of the country for this summary
+	* 
+	* @return the ISO code of the country
+	*/
+	public String getCountry() {
 		return country;
 	}
 
-	String getRegion() {
+	/**
+	* Returns the name of the region for this summary
+	* 
+	* @return the name of the region
+	*/
+	public String getRegion() {
 		return region;
 	}
 
-	String getIsp() {
+	/**
+	* Returns the name of the ISP for this summary
+	* 
+	* @return the name of the ISP
+	*/
+	public String getIsp() {
 		return isp;
 	}
 
-	int getAsn() {
+	/**
+	* Returns the autonomous system number for this summary
+	* 
+	* @return the autonomous system number
+	*/
+	public int getAsn() {
 		return asn;
 	}
 
@@ -68,6 +88,12 @@ class MLAnonimizedSummary {
 		avgSpeed = theAvgspeed;
 	}
 
+	/**
+	* Returns a "|" separated list of all the properties:
+	* "Country|Region|ISP|ASN|num_results|maxSpeed|avgSpeed"
+	* 
+	* @return a text representation of the summary
+	*/
 	public String toString() {
 		return country + "|" + region + "|" + isp + "|" + asn + "|" + numResults + "|" + maxSpeed + "|" + avgSpeed;
 	}
