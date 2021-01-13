@@ -6,16 +6,30 @@ public class MultiLevelAnonimizer {
 	private java.util.HashMap<String, MLCountry> countries;
 	private int totResults;
 
+	/**
+	* Constructor building a MultiLevelAnonimizer object, with the possibility to customize
+	* the number of results needed in order to consider a summary to be anonymous.
+	* @param minResultsInit the minimum number of results to use in order to consider a summary as anonymous.
+	* @return the new MultiLevelAnonimizer with an empty result set
+	*/
 	public MultiLevelAnonimizer(int minResultsInit){
 		defaultMinResults = minResultsInit;
 		countries = new java.util.HashMap<String, MLCountry>();
 		totResults = 0;
 	}
 
+	/**
+	* Default constructor setting the default minimum number of results for a summary as 2
+	* @return the new MultiLevelAnonimizer with an empty result set
+	*/
 	public MultiLevelAnonimizer() {
 		this(2);
 	}
 
+	/**
+	* Method to add a result to the set of results to be anonimized
+	* @param result the result to add
+	*/
 	public void addResult(MLResult result) {
 		// System.out.println("Adding result to country: " + result.getCountry());
 		if (!countries.containsKey(result.getCountry())) {
@@ -30,6 +44,10 @@ public class MultiLevelAnonimizer {
 		return "Countries: " + String.valueOf(countries.size());
 	}
 
+	/**
+	* Returns the number of different countries present in the results
+	* @return the number of countries with results in this anonimizer
+	*/
 	public int numCountries() {
 		return countries.size();
 	}
