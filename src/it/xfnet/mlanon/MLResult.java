@@ -1,13 +1,13 @@
 package it.xfnet.mlanon;
 
-class MLResult {
+public class MLResult {
 	long speed;
 	String country;
 	String region;
 	String isp;
 	int asn;
 
-	MLResult(long theSpeed, String theCountry, String theRegion, String theIsp, int theAsn){
+	public MLResult(long theSpeed, String theCountry, String theRegion, String theIsp, int theAsn){
 		speed = theSpeed;
 		country = theCountry;
 		region = theRegion;
