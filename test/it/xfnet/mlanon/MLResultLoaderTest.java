@@ -12,7 +12,7 @@ public class MLResultLoaderTest {
 				minResults = Integer.parseInt(args[1]);
 			}
 		}
-		MultiLevelAnonimizer mla = new MultiLevelAnonimizer();
+		MultiLevelAnonymizer mla = new MultiLevelAnonymizer();
 
 		System.out.println("Loading file: " + fileName);
 		MLResultLoader.loadResultCsv(fileName, mla);
@@ -20,8 +20,8 @@ public class MLResultLoaderTest {
 		System.out.println("Results: " + mla.getNumResults() + " - Countries: " + mla.numCountries()
 		 + " - Regions: " + mla.numRegions() + " - ISPs: " + mla.numIsps());
 
-		List<MLAnonimizedSummary> summaries = mla.getAnonimizedResults(minResults);
-		for(MLAnonimizedSummary summary : summaries) {
+		List<MLAnonymizedSummary> summaries = mla.getAnonymizedResults(minResults);
+		for(MLAnonymizedSummary summary : summaries) {
 			System.out.println(summary);
 		}
 	}

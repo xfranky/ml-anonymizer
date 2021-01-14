@@ -25,9 +25,9 @@ public class MLIspTest {
 		testIsp.addResult(new MLResult(12,testCountry.getCountryName(),testRegion.getRegionName(),"Test ISP",1234));
 		System.out.println(testIsp.getAverageSpeed() + "|" + testIsp.getMaxSpeed());
 
-		java.util.List<MLAnonimizedSummary> summaries = new java.util.LinkedList<MLAnonimizedSummary>();
-		testIsp.addAnonimizedResults(summaries, 2);
-		for(MLAnonimizedSummary summary : summaries) {
+		java.util.List<MLAnonymizedSummary> summaries = new java.util.LinkedList<MLAnonymizedSummary>();
+		testIsp.addAnonymizedResults(summaries, 2);
+		for(MLAnonymizedSummary summary : summaries) {
 			System.out.println(summary);
 		}
 	}

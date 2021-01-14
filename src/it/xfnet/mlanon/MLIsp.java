@@ -74,15 +74,15 @@ class MLIsp {
 		return numResults;
 	}
 
-	void addAnonimizedResults(java.util.List<MLAnonimizedSummary> summaries, int minResults) {
+	void addAnonymizedResults(java.util.List<MLAnonymizedSummary> summaries, int minResults) {
 		java.util.List<MLAsn> extraAsns = new java.util.LinkedList<MLAsn>();
-		MLAnonimizedSummary currentSummary;
+		MLAnonymizedSummary currentSummary;
 		for(MLAsn asn : asns.values()) {
 			if (asn.getNumResults() < minResults) {
 				extraAsns.add(asn);
 				// System.out.println("Extra ASNs: " + extraAsns.size());
 			} else {
-				currentSummary = new MLAnonimizedSummary(thisRegion.getCountry().getCountryName(),
+				currentSummary = new MLAnonymizedSummary(thisRegion.getCountry().getCountryName(),
 					thisRegion.getRegionName(), isp, asn.getASNumber());
 				currentSummary.setNumResults(asn.getNumResults());
 				currentSummary.setMaxSpeed(asn.getMaxSpeed());
@@ -91,7 +91,7 @@ class MLIsp {
 			}
 		}
 		if (getNumResults(extraAsns) >= minResults) {
-			currentSummary = new MLAnonimizedSummary(thisRegion.getCountry().getCountryName(),
+			currentSummary = new MLAnonymizedSummary(thisRegion.getCountry().getCountryName(),
 				thisRegion.getRegionName(), isp, null);
 			currentSummary.setNumResults(getNumResults(extraAsns)); // TODO add implementation to get number results from a list
 			currentSummary.setMaxSpeed(getMaxSpeed(extraAsns));

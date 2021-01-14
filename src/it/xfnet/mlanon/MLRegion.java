@@ -90,19 +90,19 @@ class MLRegion {
 		return thisCountry;
 	}
 
-	void addAnonimizedResults(java.util.List<MLAnonimizedSummary> summaries, int minResults) {
+	void addAnonymizedResults(java.util.List<MLAnonymizedSummary> summaries, int minResults) {
 		java.util.List<MLIsp> extraIsps = new java.util.LinkedList<MLIsp>();
-		MLAnonimizedSummary currentSummary;
+		MLAnonymizedSummary currentSummary;
 		for(MLIsp isp : isps.values()) {
 			if (isp.getNumResults() < minResults) {
 				extraIsps.add(isp);
 				// System.out.println("Extra ASNs: " + extraAsns.size());
 			} else {
-				isp.addAnonimizedResults(summaries, minResults);
+				isp.addAnonymizedResults(summaries, minResults);
 			}
 		}
 		if (getNumResults(extraIsps) >= minResults) {
-			currentSummary = new MLAnonimizedSummary(thisCountry.getCountryName(),
+			currentSummary = new MLAnonymizedSummary(thisCountry.getCountryName(),
 				region, null, null);
 			currentSummary.setNumResults(getNumResults(extraIsps)); // TODO add implementation to get number results from a list
 			currentSummary.setMaxSpeed(getMaxSpeed(extraIsps));

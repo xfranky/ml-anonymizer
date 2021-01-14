@@ -3,7 +3,7 @@ package it.xfnet.mlanon;
 /**
 * This class represents an anonymized summary of records with all the properties that could be anonymized
 */
-public class MLAnonimizedSummary {
+public class MLAnonymizedSummary {
 	String country;
 	String region;
 	String isp;
@@ -25,7 +25,7 @@ public class MLAnonimizedSummary {
 	* @param theAsn		an Integer with the autonomous system number
 	* @return the summary object
 	*/
-	MLAnonimizedSummary(String theCountry, String theRegion, String theIsp, Integer theAsn){
+	MLAnonymizedSummary(String theCountry, String theRegion, String theIsp, Integer theAsn){
 		country = theCountry;
 		region = theRegion;
 		isp = theIsp;

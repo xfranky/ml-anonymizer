@@ -6,7 +6,7 @@ import java.io.IOException;
 
 class MLResultLoader {
 
-	static void loadResultCsv(String fileName, MultiLevelAnonimizer mla) {
+	static void loadResultCsv(String fileName, MultiLevelAnonymizer mla) {
 		String line;
 		MLResult result;
 		try {

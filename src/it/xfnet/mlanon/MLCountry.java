@@ -98,19 +98,19 @@ class MLCountry {
 		return maxSpeed;
 	}
 
-	void addAnonimizedResults(java.util.List<MLAnonimizedSummary> summaries, int minResults) {
+	void addAnonymizedResults(java.util.List<MLAnonymizedSummary> summaries, int minResults) {
 		java.util.List<MLRegion> extraRegions = new java.util.LinkedList<MLRegion>();
-		MLAnonimizedSummary currentSummary;
+		MLAnonymizedSummary currentSummary;
 		for(MLRegion region : regions.values()) {
 			if (region.getNumResults() < minResults) {
 				extraRegions.add(region);
 				// System.out.println("Extra ASNs: " + extraAsns.size());
 			} else {
-				region.addAnonimizedResults(summaries, minResults);
+				region.addAnonymizedResults(summaries, minResults);
 			}
 		}
 		if (getNumResults(extraRegions) >= minResults) {
-			currentSummary = new MLAnonimizedSummary(country, null, null, null);
+			currentSummary = new MLAnonymizedSummary(country, null, null, null);
 			currentSummary.setNumResults(getNumResults(extraRegions)); // TODO add implementation to get number results from a list
 			currentSummary.setMaxSpeed(getMaxSpeed(extraRegions));
 			currentSummary.setAvgSpeed(getAverageSpeed(extraRegions));

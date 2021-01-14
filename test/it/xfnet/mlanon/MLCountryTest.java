@@ -33,9 +33,9 @@ public class MLCountryTest {
 		testCountry.addResult(new MLResult(16,"Test Country","Test Region 5","Test ISP 5.1",5236));
 		System.out.println(testCountry.getAverageSpeed() + "|" + testCountry.getMaxSpeed());
 
-		java.util.List<MLAnonimizedSummary> summaries = new java.util.LinkedList<MLAnonimizedSummary>();
-		testCountry.addAnonimizedResults(summaries, minResults);
-		for(MLAnonimizedSummary summary : summaries) {
+		java.util.List<MLAnonymizedSummary> summaries = new java.util.LinkedList<MLAnonymizedSummary>();
+		testCountry.addAnonymizedResults(summaries, minResults);
+		for(MLAnonymizedSummary summary : summaries) {
 			System.out.println(summary);
 		}
 	}

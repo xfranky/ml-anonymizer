@@ -3,17 +3,17 @@ package it.xfnet.mlanon;
 import java.util.List;
 
 /***
-* This class will test the Multi Level Anonimizer using a small set of data
+* This class will test the Multi Level Anonymizer using a small set of data
 *
-* @see MultiLevelAnonimizer
+* @see MultiLevelAnonymizer
 */
 
-public class MultiLevelAnonimizerTest {
+public class MultiLevelAnonymizerTest {
 	
 	/***
-	* The main method will test the Multi Level Anonimizer using a small set of data
+	* The main method will test the Multi Level Anonymizer using a small set of data
 	* 
-	* @param args The main method accepts the number of minimum results to consider as anonimized
+	* @param args The main method accepts the number of minimum results to consider as anonymized
 	*/
 
 	public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class MultiLevelAnonimizerTest {
 			minResults = Integer.parseInt(args[0]);
 		}
 		System.out.println("hii!!");
-		MultiLevelAnonimizer mla = new MultiLevelAnonimizer();
+		MultiLevelAnonymizer mla = new MultiLevelAnonymizer();
 		System.out.println("Results: " + mla.getNumResults() + " - Countries: " + mla.numCountries()
 		 + " - Regions: " + mla.numRegions() + " - ISPs: " + mla.numIsps());
 
@@ -67,8 +67,8 @@ public class MultiLevelAnonimizerTest {
 		System.out.println("Results: " + mla.getNumResults() + " - Countries: " + mla.numCountries()
 		 + " - Regions: " + mla.numRegions() + " - ISPs: " + mla.numIsps());
 
-		List<MLAnonimizedSummary> summaries = mla.getAnonimizedResults(minResults);
-		for(MLAnonimizedSummary summary : summaries) {
+		List<MLAnonymizedSummary> summaries = mla.getAnonymizedResults(minResults);
+		for(MLAnonymizedSummary summary : summaries) {
 			System.out.println(summary);
 		}
 	}
