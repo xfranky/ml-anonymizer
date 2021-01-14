@@ -10,7 +10,6 @@ public class MultiLevelAnonymizer {
 	* Constructor building a MultiLevelAnonymizer object, with the possibility to customize
 	* the number of results needed in order to consider a summary to be anonymous.
 	* @param minResultsInit the minimum number of results to use in order to consider a summary as anonymous.
-	* @return the new MultiLevelAnonymizer with an empty result set
 	*/
 	public MultiLevelAnonymizer(int minResultsInit){
 		defaultMinResults = minResultsInit;
@@ -20,7 +19,6 @@ public class MultiLevelAnonymizer {
 
 	/**
 	* Default constructor setting the default minimum number of results for a summary as 2
-	* @return the new MultiLevelAnonymizer with an empty result set
 	*/
 	public MultiLevelAnonymizer() {
 		this(2);
