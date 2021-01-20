@@ -18,7 +18,7 @@ class MLIsp {
 		// If I don't have such an AS already, I add it
 		if(!asns.containsKey(result.getAsn())) {
 			asns.put(result.getAsn(), new MLAsn(result.getAsn(),this));
-			System.out.println("Added ASN: " + result.getAsn());
+			// System.out.println("Added ASN: " + result.getAsn());
 		}
 		// At this point I should have a relevant region, so let's percolate the result
 		asns.get(result.getAsn()).addResult(result);

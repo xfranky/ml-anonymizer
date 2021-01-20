@@ -20,7 +20,7 @@ class MLCountry {
 		// If I don't have a region with that name already, I add it
 		if(!regions.containsKey(result.getRegion())) {
 			regions.put(result.getRegion(), new MLRegion(result.getRegion(),this));
-			System.out.println("Added region: " + result.getRegion());
+			// System.out.println("Added region: " + result.getRegion());
 		}
 		// At this point I should have a relevant region, so let's percolate the result
 		regions.get(result.getRegion()).addResult(result);

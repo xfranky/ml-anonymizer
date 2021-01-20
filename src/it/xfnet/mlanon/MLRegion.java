@@ -18,7 +18,7 @@ class MLRegion {
 		// If I don't have an ISP with that name already, I add it
 		if(!isps.containsKey(result.getIsp())) {
 			isps.put(result.getIsp(), new MLIsp(result.getIsp(),this));
-			System.out.println("Added ISP: " + result.getIsp());
+			// System.out.println("Added ISP: " + result.getIsp());
 		}
 		// At this point I should have a relevant region, so let's percolate the result
 		isps.get(result.getIsp()).addResult(result);
