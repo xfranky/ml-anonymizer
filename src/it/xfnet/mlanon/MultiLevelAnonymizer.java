@@ -5,16 +5,30 @@ public class MultiLevelAnonymizer {
 	private int defaultMinResults;
 	private java.util.HashMap<String, MLCountry> countries;
 	private int totResults;
+	private int verbosity;
 
 	/**
 	* Constructor building a MultiLevelAnonymizer object, with the possibility to customize
-	* the number of results needed in order to consider a summary to be anonymous.
+	* the number of results needed in order to consider a summary to be anonymous. By
+	* default verbosity is turned off.
 	* @param minResultsInit the minimum number of results to use in order to consider a summary as anonymous.
 	*/
 	public MultiLevelAnonymizer(int minResultsInit){
+		this(minResultsInit, 0);
+	}
+
+	/**
+	* Constructor building a MultiLevelAnonymizer object, with the possibility to customize
+	* the number of results needed in order to consider a summary to be anonymous and
+	* the verbosity for debug purposes
+	* @param minResultsInit the minimum number of results to use in order to consider a summary as anonymous.
+	* @param theVerbosity the verbosity level for debug purposes, between 0 (off) and 3
+	*/
+	public MultiLevelAnonymizer(int minResultsInit, int theVerbosity){
 		defaultMinResults = minResultsInit;
 		countries = new java.util.HashMap<String, MLCountry>();
 		totResults = 0;
+		verbosity = theVerbosity;
 	}
 
 	/**
