@@ -79,3 +79,18 @@
 110;JP;Yokohama;DoCoMo;9123
 190;HK;Central;Netvigator;4162
 130;JP;Tokyo;DoCoMo;9124
+60;VN;Hanoi;VietTel;7813
+40;TH;Bangkok;ThaiTel;8328
+60;VN;Ho Chi Minh City;VietTel;7814
+30;TH;Chiang Mai;ThreeCom;8329
+70;VN;Hanoi;VietTel;7813
+40;TH;Bangkok;ThaiTel;8328
+50;VN;Ho Chi Minh City;VietTel;7814
+30;TH;Chiang Rai;ThreeCom;8327
+80;MY;Kuala Lumpur;MyTel;6263
+120;SG;Central Singapore;MyRepublic;8938
+40;TH;Bangkok;ThaiTel;8328
+50;VN;Ho Chi Minh City;VietTel;7814
+30;TH;Chiang Rai;ThreeCom;8327
+80;MY;Kuala Lumpur;MyTel;6263
+120;SG;Central Singapore;MyRepublic;8938
