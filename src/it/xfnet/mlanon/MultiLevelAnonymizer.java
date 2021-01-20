@@ -43,10 +43,14 @@ public class MultiLevelAnonymizer {
 	* @param result the result to add
 	*/
 	public void addResult(MLResult result) {
-		// System.out.println("Adding result to country: " + result.getCountry());
+		if (verbosity > 2) {
+			System.out.println("Adding result to country: " + result.getCountry());
+		}
 		if (!countries.containsKey(result.getCountry())) {
 			countries.put(result.getCountry(), new MLCountry(result.getCountry()));
-			System.out.println("Added country: " + result.getCountry());
+			if (verbosity > 1) {
+				System.out.println("Added country: " + result.getCountry());
+			}
 		}
 		countries.get(result.getCountry()).addResult(result);
 		totResults++;
@@ -93,11 +97,6 @@ public class MultiLevelAnonymizer {
 		java.util.List<MLAnonymizedSummary> summaries = new java.util.ArrayList<MLAnonymizedSummary>();
 		MLAnonymizedSummary currentSummary;
 		for(MLCountry country : countries.values()) {
-			// if(country.getNumResults() >= minResults) {
-			// 	currentSummary = new MLAnonymizedSummary(country.getCountryName());
-			// 	country.populateSummaries(summaries, currentSummary, minResults);
-			// 	summaries.add(currentSummary);
-			// }
 			country.addAnonymizedResults(summaries, minResults);
 		}
 		return summaries;
