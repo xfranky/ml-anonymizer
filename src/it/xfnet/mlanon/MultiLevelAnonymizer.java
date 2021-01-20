@@ -105,9 +105,9 @@ public class MultiLevelAnonymizer {
 	}
 
 	public java.util.List<MLAnonymizedSummary> getAnonymizedResults(int minResults) {
-		// Let's keep the anonymized summaries in a list
+		// Let's keep the anonymized summaries in a list; will be filled and scanned
+		// in order so there is no need for fancy data structures
 		java.util.List<MLAnonymizedSummary> summaries = new java.util.ArrayList<MLAnonymizedSummary>();
-		MLAnonymizedSummary currentSummary;
 		for(MLCountry country : countries.values()) {
 			country.addAnonymizedResults(summaries, minResults);
 		}
