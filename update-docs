@@ -1,0 +1,3 @@
+#!/bin/bash
+# Command to compile the ml-anonymize tests
+javadoc -d docs/ src/it/xfnet/mlanon/*.java

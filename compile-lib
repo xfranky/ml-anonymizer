@@ -1,0 +1,3 @@
+#!/bin/bash
+# Command to compile the ml-anonymize library
+javac -d bin/ src/it/xfnet/mlanon/*.java
