@@ -61,13 +61,17 @@ public class MultiLevelAnonymizer {
 	}
 
 	/**
-	* Returns the number of different countries present in the results
+	* Returns the number of different countries present in the collected results
 	* @return the number of countries with results in this anonymizer
 	*/
 	public int numCountries() {
 		return countries.size();
 	}
 
+	/**
+	* Returns the total number of regions present in the collected results
+	* @return the number of regions with results in this anonymizer
+	*/
 	public int numRegions() {
 		int regionCount = 0;
 		for(MLCountry country : countries.values()) {
@@ -76,6 +80,10 @@ public class MultiLevelAnonymizer {
 		return regionCount;
 	}
 
+	/**
+	* Returns the total number of ISPs present in the collected results
+	* @return the number of ISPs with results in this anonymizer
+	*/
 	public int numIsps() {
 		int ispCount = 0;
 		for(MLCountry country : countries.values()) {
@@ -84,6 +92,10 @@ public class MultiLevelAnonymizer {
 		return ispCount;
 	}
 
+	/**
+	* Returns the total number of results collected
+	* @return the number of results in this anonymizer
+	*/
 	public int getNumResults() {
 		return totResults;
 	}
